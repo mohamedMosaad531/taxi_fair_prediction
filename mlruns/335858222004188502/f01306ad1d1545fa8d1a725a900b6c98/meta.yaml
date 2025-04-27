@@ -1,0 +1,15 @@
+artifact_uri: file:///d:/taki_fair_prediction/mlruns/335858222004188502/f01306ad1d1545fa8d1a725a900b6c98/artifacts
+end_time: 1745742222008
+entry_point_name: ''
+experiment_id: '335858222004188502'
+lifecycle_stage: active
+run_id: f01306ad1d1545fa8d1a725a900b6c98
+run_name: Catboost
+run_uuid: f01306ad1d1545fa8d1a725a900b6c98
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745742150544
+status: 3
+tags: []
+user_id: Mohamed Mosaad

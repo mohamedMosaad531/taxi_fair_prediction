@@ -32,7 +32,7 @@ def processing(key,pickup_datetime,pickup_longitude,pickup_latitude,dropoff_long
     test_df['key']=pd.to_datetime(test_df['key'])
     test_df['year']=test_df['key'].dt.year
     test_df['month']=test_df['key'].dt.month
-    test_df['day']=test_df['key'].dt.month
+    test_df['day']=test_df['key'].dt.day
 
     test_df['hour']=test_df['key'].dt.hour
 

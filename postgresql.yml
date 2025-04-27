@@ -1,0 +1,52 @@
+version: '3.7'
+
+services:  
+  pg-db:
+    image: postgres
+    restart: always
+    container_name: pg-db
+    hostname: pg-db
+    environment:
+      POSTGRES_PASSWORD: 1234 # the username is postgres
+    volumes:
+      - D:/sql:/sql
+    ports:
+      - "5432:5432" 
+
+  adminer:
+    image: adminer
+    hostname: pg-adminer
+    container_name: pg-adminer
+    volumes:
+      - D:\taki_fair_prediction:/sql
+    restart: always
+    ports:
+      - 8080:8080
+
+  jupyter:
+    image: asami76/allspark:latest
+    container_name: jupyter
+    hostname: jupyter
+    environment:
+      - PUID=1000
+      - PGID=1000
+    volumes:
+      - D:\taki_fair_prediction:/sql
+    ports:
+      - 8888:8888
+    restart: unless-stopped
+
+  pgadmin:
+    image: dpage/pgadmin4
+    hostname: pgadmin
+    container_name: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "badwymmd15@gmail.com"
+      PGADMIN_DEFAULT_PASSWORD: "1234"
+    volumes:
+      - D:\taki_fair_prediction:/sql
+    restart: always
+    ports:
+      - "5050:80"
+
+    

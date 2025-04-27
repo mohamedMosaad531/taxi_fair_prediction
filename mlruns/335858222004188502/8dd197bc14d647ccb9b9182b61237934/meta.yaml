@@ -1,0 +1,15 @@
+artifact_uri: file:///d:/taki_fair_prediction/mlruns/335858222004188502/8dd197bc14d647ccb9b9182b61237934/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '335858222004188502'
+lifecycle_stage: active
+run_id: 8dd197bc14d647ccb9b9182b61237934
+run_name: Adaboost
+run_uuid: 8dd197bc14d647ccb9b9182b61237934
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745741211335
+status: 1
+tags: []
+user_id: Mohamed Mosaad
