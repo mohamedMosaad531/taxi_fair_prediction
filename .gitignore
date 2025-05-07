@@ -2,5 +2,6 @@ data/
 temp.csv
 app/
 catboost_info/
-mlruns/
+mlruns/ 
 postgresql.yml
+catboost_info/
