@@ -1,7 +1,7 @@
 import numpy as np
 import pickle
 import streamlit as st
-from temp import processing
+from preprocessing.preprocessing import processing
 
 loaded_model=pickle.load(open('D:/taki_fair_prediction/models/trained_model_xgboost.sav','rb'))
 print('aa')

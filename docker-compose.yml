@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+  db:
+    image: postgres
+    container_name: postgres-db
+    restart: always
+
+    env_file:
+      - .env
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+      - ./postgres/init:/docker-entrypoint-initdb.d
+      - ./postgres/data:/data
+      - ./postgres/queries:/queries  # New volume for SQL queries or scripts
+
+volumes:
+  pg_data:
