@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import pickle
-from src.pipeline.data_loader import load_raw_data
+# from src.pipeline.data_loader import load_raw_data
 from src.utils.config import FILE_PATHS
 
 yearly_fare = pd.read_pickle(FILE_PATHS["yearly_fare"])
@@ -19,8 +19,7 @@ WTC_LONLAT = -74.0099, 40.7126
 
 kmeans=pickle.load(open('D:/taki_fair_prediction/models/cluster_model.sav','rb'))
 
-
-def preprocess(df):
+def preprocess_input(df):
     df.dropna(inplace=True)
     min_longitude=-76#-74.26
     max_longitude=-71#-73.70
@@ -34,7 +33,6 @@ def preprocess(df):
     )
     df=df[~mask].copy()
 
-    df=df[(df["fare_amount"]<200 )& (df["fare_amount"]>.5)]
        
     df=df[df['passenger_count'].isin([1,2,3,4,5,6])].copy() 
 
@@ -128,6 +126,11 @@ def preprocess(df):
     # 'pickup_longitude','pickup_latitude',
     # 'dropoff_longitude','dropoff_latitude',
     # 'jkf','lga','ewr','met','wtc']
+    return df
+
+def preprocess(df):
+    preprocess_input(df)
+    df=df[(df["fare_amount"]<200 )& (df["fare_amount"]>.5)]
     return df
 
 # aa=load_raw_data()

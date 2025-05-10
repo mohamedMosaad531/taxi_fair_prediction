@@ -1,0 +1,31 @@
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Logs and databases
+*.log
+*.db
+*.sqlite3
+
+# Environment files
+.env
+
+# Jupyter notebooks (only if not needed in Docker)
+notebooks/
+
+# Data that shouldn't be inside the container
+data/
+temp.csv
+
+# Output and intermediate files
+mlruns/
+submissions/
+
+# Model training artifacts (only if models are already finalized)
+catboost_info/
+
+# Optional: prevent copying Docker files into the container
+Dockerfile
+docker-compose.yml
+postgresql.yml

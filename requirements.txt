@@ -1,0 +1,11 @@
+fastapi==0.115.12
+uvicorn==0.34.2
+scikit-learn==1.5.1
+xgboost==2.0.3
+catboost
+pandas
+numpy
+sqlalchemy
+psycopg2-binary
+python-dotenv
+
